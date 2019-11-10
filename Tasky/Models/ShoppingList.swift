@@ -29,7 +29,7 @@ var SHOPPING_ITEMS3: [ShoppingItem] = [
     ShoppingItem(name: "Candy", isComplete: true)
 ]
 
-var SHOPPING_LIST: [ShoppingList] = [
+var SHOPPING_LISTS: [ShoppingList] = [
     ShoppingList(name: "Costco", shoppingItems: SHOPPING_ITEMS3),
     ShoppingList(name: "Fred Meyers", shoppingItems: SHOPPING_ITEMS1),
     ShoppingList(name: "Smiths", shoppingItems: SHOPPING_ITEMS2)

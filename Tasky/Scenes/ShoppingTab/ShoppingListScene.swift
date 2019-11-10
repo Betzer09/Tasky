@@ -15,13 +15,13 @@ struct ShoppingListScene: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(SHOPPING_LIST, id: \.self) { list in
-                    Section(header: Text(list.name).onTapGesture {
+                ForEach(SHOPPING_LISTS, id: \.self) { list in
+                    Section(header: ShoppingListHeaderScene(shoppingList: list).onTapGesture {
                         self.shoppingListState[list] = !self.isExpanded(list)
                     }) {
                         if self.isExpanded(list){
                             ForEach(list.shoppingItems, id:\.self){ item in
-                                Text(item.name)
+                                ShoppingRow(item: item)
                             }
                         }
                     }

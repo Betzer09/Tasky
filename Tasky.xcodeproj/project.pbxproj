@@ -19,6 +19,7 @@
 		237A73792377A15B00B76387 /* AddItemScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A73782377A15B00B76387 /* AddItemScene.swift */; };
 		237A737D23785E0F00B76387 /* ExpandingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A737C23785E0F00B76387 /* ExpandingScene.swift */; };
 		237A737F237862A300B76387 /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A737E237862A300B76387 /* ShoppingList.swift */; };
+		237A73812378742900B76387 /* ShoppingListHeaderScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A73802378742900B76387 /* ShoppingListHeaderScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		237A73782377A15B00B76387 /* AddItemScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemScene.swift; sourceTree = "<group>"; };
 		237A737C23785E0F00B76387 /* ExpandingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingScene.swift; sourceTree = "<group>"; };
 		237A737E237862A300B76387 /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
+		237A73802378742900B76387 /* ShoppingListHeaderScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListHeaderScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				237A73762377952D00B76387 /* ShoppingListScene.swift */,
 				237A736F23778F7900B76387 /* ShoppingRow.swift */,
 				237A73782377A15B00B76387 /* AddItemScene.swift */,
+				237A73802378742900B76387 /* ShoppingListHeaderScene.swift */,
 			);
 			path = ShoppingTab;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				237A737D23785E0F00B76387 /* ExpandingScene.swift in Sources */,
 				237A735C237777DC00B76387 /* SceneDelegate.swift in Sources */,
 				237A73742377910900B76387 /* ShoppingItem.swift in Sources */,
+				237A73812378742900B76387 /* ShoppingListHeaderScene.swift in Sources */,
 				237A73772377952D00B76387 /* ShoppingListScene.swift in Sources */,
 				237A735E237777DC00B76387 /* ContentView.swift in Sources */,
 			);

@@ -8,15 +8,18 @@
 
 import SwiftUI
 
+/**
+ This is really a shopping item cell
+ */
 struct ShoppingRow: View {
     var item: ShoppingItem
     
     var body: some View {
-        NavigationLink(destination: Text("FooBar")) {
+        NavigationLink(destination: Text("")) {
             HStack {
                 Text("\(item.name)")
                 .font(.title)
-                .fontWeight(.bold)
+                .fontWeight(.regular)
             }.padding()
         }
     }
