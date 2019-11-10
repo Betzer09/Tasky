@@ -10,16 +10,20 @@ import SwiftUI
 
 struct AddItemScene: View {
     @State var itemPlaceholder: String = ""
+    @Binding var isPresenting: Bool
     
     var body: some View {
-        
         VStack(spacing: 10) {
             TextField("Bananas", text: $itemPlaceholder)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+            .textFieldStyle(RoundedBorderTextFieldStyle())
             Button(action: {
-                print("Button Pressed")
+                // Create row
+                let newItem = ShoppingItem(id: Int.random(in: 0...1000), name: self.itemPlaceholder, isComplete: false)
+                SHOPPING_ITEMS.append(newItem)
+                print("We now have \(SHOPPING_ITEMS.count)")
+                self.isPresenting = false
             }) {
-                Text("Border Button")
+                Text("Add Item")
                     .foregroundColor(Color.black)
                     .padding()
                     .background(
@@ -31,8 +35,9 @@ struct AddItemScene: View {
     }
 }
 
-struct AddItemScene_Previews: PreviewProvider {
-    static var previews: some View {
-        AddItemScene()
-    }
-}
+// MARK: - Preview Doesn't work on this page
+//struct AddItemScene_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AddItemScene(isPresenting: Binding<Bool>(false))
+//    }
+//}
