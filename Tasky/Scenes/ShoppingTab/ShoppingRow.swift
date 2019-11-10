@@ -24,6 +24,6 @@ struct ShoppingRow: View {
 
 struct ShoppingRow_Previews: PreviewProvider {
     static var previews: some View {
-        ShoppingRow(item: SHOPPING_ITEMS.first!)
+        ShoppingRow(item: SHOPPING_ITEMS1.first!)
     }
 }

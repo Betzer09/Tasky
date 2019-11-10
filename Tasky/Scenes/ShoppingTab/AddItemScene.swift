@@ -18,9 +18,10 @@ struct AddItemScene: View {
             .textFieldStyle(RoundedBorderTextFieldStyle())
             Button(action: {
                 // Create row
-                let newItem = ShoppingItem(id: Int.random(in: 0...1000), name: self.itemPlaceholder, isComplete: false)
-                SHOPPING_ITEMS.append(newItem)
-                print("We now have \(SHOPPING_ITEMS.count)")
+                let newItem = ShoppingItem(name: self.itemPlaceholder, isComplete: false)
+                // TODO: Selected the correct row
+                SHOPPING_ITEMS1.append(newItem)
+                print("We now have \(SHOPPING_ITEMS1.count)")
                 self.isPresenting = false
             }) {
                 Text("Add Item")

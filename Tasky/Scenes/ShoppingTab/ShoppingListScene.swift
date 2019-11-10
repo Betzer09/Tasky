@@ -10,21 +10,37 @@ import SwiftUI
 
 struct ShoppingListScene: View {
     @State var isPresentingView = false
+    @State var shoppingListState: [ShoppingList:Bool] = [:]
+//    @State var currenSelectedList: ShoppingList?
+    
     var body: some View {
         NavigationView {
-            List(SHOPPING_ITEMS) { item in
-                ShoppingRow(item: item)
-            }.navigationBarTitle("Shopping")
-                .navigationBarItems(trailing:
-                    Button(action: {
-                        self.isPresentingView = true
-                    }, label: {
-                        Text("Add").foregroundColor(Color.black)
-                    }).sheet(isPresented: $isPresentingView, content: {
-                        AddItemScene(isPresenting: self.$isPresentingView)
-                    })
-            )
+            List(SHOPPING_LIST) { list in
+                Section(header: Text("\(list.name)").onTapGesture {
+                    self.shoppingListState[list] = !self.isExpanded(list)
+                }) {
+                    if self.isExpanded(list) {
+                        ForEach(list.shoppingItems, id:\.self){ item in
+                            Text(item.name)
+                        }
+                    }
+                }.navigationBarTitle("Shopping List")
+                 .navigationBarItems(trailing:
+                        Button(action: {
+                            self.isPresentingView = true
+                        }, label: {
+                            Text("Add").foregroundColor(Color.black)
+                        }).sheet(isPresented: self.$isPresentingView, content: {
+                            AddItemScene(isPresenting: self.$isPresentingView)
+                        })
+                 )
+            }
+               
         }
+    }
+    
+    func isExpanded(_ shoppingList:ShoppingList) -> Bool {
+        shoppingListState[shoppingList] ?? false
     }
 }
 
