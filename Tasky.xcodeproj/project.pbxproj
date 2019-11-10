@@ -13,6 +13,9 @@
 		237A7360237777DF00B76387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 237A735F237777DF00B76387 /* Assets.xcassets */; };
 		237A7363237777DF00B76387 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 237A7362237777DF00B76387 /* Preview Assets.xcassets */; };
 		237A7366237777DF00B76387 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237A7364237777DF00B76387 /* LaunchScreen.storyboard */; };
+		237A737023778F7900B76387 /* ShoppingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A736F23778F7900B76387 /* ShoppingRow.swift */; };
+		237A73742377910900B76387 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A73732377910900B76387 /* ShoppingItem.swift */; };
+		237A73772377952D00B76387 /* ShoppingListScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A73762377952D00B76387 /* ShoppingListScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		237A7362237777DF00B76387 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		237A7365237777DF00B76387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		237A7367237777DF00B76387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		237A736F23778F7900B76387 /* ShoppingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingRow.swift; sourceTree = "<group>"; };
+		237A73732377910900B76387 /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
+		237A73762377952D00B76387 /* ShoppingListScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +62,11 @@
 		237A7358237777DC00B76387 /* Tasky */ = {
 			isa = PBXGroup;
 			children = (
+				237A7372237790F600B76387 /* Models */,
+				237A7371237790EE00B76387 /* Scenes */,
 				237A7359237777DC00B76387 /* AppDelegate.swift */,
 				237A735B237777DC00B76387 /* SceneDelegate.swift */,
-				237A735D237777DC00B76387 /* ContentView.swift */,
-				237A735F237777DF00B76387 /* Assets.xcassets */,
-				237A7364237777DF00B76387 /* LaunchScreen.storyboard */,
+				237A73752377946300B76387 /* Resrouces */,
 				237A7367237777DF00B76387 /* Info.plist */,
 				237A7361237777DF00B76387 /* Preview Content */,
 			);
@@ -73,6 +79,41 @@
 				237A7362237777DF00B76387 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		237A736E23778F6400B76387 /* ShoppingTab */ = {
+			isa = PBXGroup;
+			children = (
+				237A736F23778F7900B76387 /* ShoppingRow.swift */,
+				237A73762377952D00B76387 /* ShoppingListScene.swift */,
+			);
+			path = ShoppingTab;
+			sourceTree = "<group>";
+		};
+		237A7371237790EE00B76387 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				237A735D237777DC00B76387 /* ContentView.swift */,
+				237A736E23778F6400B76387 /* ShoppingTab */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		237A7372237790F600B76387 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				237A73732377910900B76387 /* ShoppingItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		237A73752377946300B76387 /* Resrouces */ = {
+			isa = PBXGroup;
+			children = (
+				237A735F237777DF00B76387 /* Assets.xcassets */,
+				237A7364237777DF00B76387 /* LaunchScreen.storyboard */,
+			);
+			path = Resrouces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +187,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				237A737023778F7900B76387 /* ShoppingRow.swift in Sources */,
 				237A735A237777DC00B76387 /* AppDelegate.swift in Sources */,
 				237A735C237777DC00B76387 /* SceneDelegate.swift in Sources */,
+				237A73742377910900B76387 /* ShoppingItem.swift in Sources */,
+				237A73772377952D00B76387 /* ShoppingListScene.swift in Sources */,
 				237A735E237777DC00B76387 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
