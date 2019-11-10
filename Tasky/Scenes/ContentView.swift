@@ -7,8 +7,10 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
+    
     var body: some View {
         NavigationView {
             TabView {
@@ -28,7 +30,6 @@ struct ContentView: View {
                         Text("Cellar")
                 }.tag(2)
             }.font(.largeTitle)
-                .navigationBarTitle("Tasky")
             
         }
     }

@@ -9,9 +9,21 @@
 import SwiftUI
 
 struct ShoppingListScene: View {
+    @State var isPresentingView = false
     var body: some View {
-        List(SHOPPING_ITEMS) { item in
-            ShoppingRow(item: item)
+        NavigationView {
+            List(SHOPPING_ITEMS) { item in
+                ShoppingRow(item: item)
+            }.navigationBarTitle("Shopping").navigationBarItems(trailing:
+                    Button(action: {
+                        print("Button Tapped")
+                        self.isPresentingView = true
+                    }, label: {
+                        Text("Add").foregroundColor(Color.black)
+                    }).sheet(isPresented: $isPresentingView, content: {
+                        AddItemScene()
+                    })
+            )
         }
     }
 }

@@ -16,6 +16,7 @@
 		237A737023778F7900B76387 /* ShoppingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A736F23778F7900B76387 /* ShoppingRow.swift */; };
 		237A73742377910900B76387 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A73732377910900B76387 /* ShoppingItem.swift */; };
 		237A73772377952D00B76387 /* ShoppingListScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A73762377952D00B76387 /* ShoppingListScene.swift */; };
+		237A73792377A15B00B76387 /* AddItemScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A73782377A15B00B76387 /* AddItemScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		237A736F23778F7900B76387 /* ShoppingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingRow.swift; sourceTree = "<group>"; };
 		237A73732377910900B76387 /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		237A73762377952D00B76387 /* ShoppingListScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListScene.swift; sourceTree = "<group>"; };
+		237A73782377A15B00B76387 /* AddItemScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			children = (
 				237A736F23778F7900B76387 /* ShoppingRow.swift */,
 				237A73762377952D00B76387 /* ShoppingListScene.swift */,
+				237A73782377A15B00B76387 /* AddItemScene.swift */,
 			);
 			path = ShoppingTab;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			files = (
 				237A737023778F7900B76387 /* ShoppingRow.swift in Sources */,
 				237A735A237777DC00B76387 /* AppDelegate.swift in Sources */,
+				237A73792377A15B00B76387 /* AddItemScene.swift in Sources */,
 				237A735C237777DC00B76387 /* SceneDelegate.swift in Sources */,
 				237A73742377910900B76387 /* ShoppingItem.swift in Sources */,
 				237A73772377952D00B76387 /* ShoppingListScene.swift in Sources */,
@@ -340,7 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SPARQDEV.Tasky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -360,7 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SPARQDEV.Tasky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
