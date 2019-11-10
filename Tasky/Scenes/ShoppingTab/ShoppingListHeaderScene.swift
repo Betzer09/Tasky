@@ -16,7 +16,12 @@ struct ShoppingListHeaderScene: View {
             Text("\(shoppingList.name)")
                 .font(.headline)
                 .fontWeight(.medium)
-        }.padding()
+            // Adds a spce
+            Spacer()
+            
+            Image("Down")
+        }.frame(maxWidth: .infinity)
+        .padding()
     }
 }
 

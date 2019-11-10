@@ -15,13 +15,11 @@ struct ShoppingRow: View {
     var item: ShoppingItem
     
     var body: some View {
-        NavigationLink(destination: Text("")) {
-            HStack {
-                Text("\(item.name)")
-                .font(.title)
+        HStack {
+            Text("\(item.name)")
+                .font(.headline)
                 .fontWeight(.regular)
-            }.padding()
-        }
+        }.padding(4)
     }
 }
 
