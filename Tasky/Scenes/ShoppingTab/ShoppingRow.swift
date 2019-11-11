@@ -8,11 +8,15 @@
 
 import SwiftUI
 
+
+
 /**
  This is really a shopping item cell
  */
 struct ShoppingRow: View {
     var item: ShoppingItem
+    @State var isComplete: Bool
+
     
     var body: some View {
         HStack {
@@ -22,10 +26,24 @@ struct ShoppingRow: View {
             
             Spacer()
             
-            if item.isComplete {
-                Image("Checked")
+            if isComplete {
+                Button(action: {
+                    print("Is Complete is false")
+                    self.isComplete = false
+                    self.item.toggleIsComplete()
+                    print("Our item is now: \(self.item.isComplete)")
+                }) {
+                    Image("Checked").renderingMode(.original)
+                }
             } else {
-                Image("Unchecked")
+                Button(action: {
+                    print("Is Complete is now true")
+                    self.isComplete = true
+                    self.item.toggleIsComplete()
+                    print("Our item is now: \(self.item.isComplete)")
+                }) {
+                    Image("Unchecked").renderingMode(.original)
+                }
             }
         }
         .frame(maxWidth: .some(325))
@@ -34,8 +52,10 @@ struct ShoppingRow: View {
     }
 }
 
+#if DEBUG
 struct ShoppingRow_Previews: PreviewProvider {
     static var previews: some View {
-        ShoppingRow(item: SHOPPING_ITEMS1[1])
+        ShoppingRow(item: SHOPPING_ITEMS1[1], isComplete: SHOPPING_ITEMS1[1].isComplete)
     }
 }
+#endif

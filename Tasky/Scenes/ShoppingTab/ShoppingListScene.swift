@@ -21,7 +21,7 @@ struct ShoppingListScene: View {
                     }) {
                         if self.isExpanded(list){
                             ForEach(list.shoppingItems, id:\.self){ item in
-                                ShoppingRow(item: item)
+                                ShoppingRow(item: item, isComplete: item.isComplete)
                             }
                         }
                     }

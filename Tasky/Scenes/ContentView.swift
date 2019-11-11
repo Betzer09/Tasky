@@ -30,7 +30,6 @@ struct ContentView: View {
                         Text("Cellar")
                 }.tag(2)
             }.font(.largeTitle)
-                .edgesIgnoringSafeArea(.all)
                 .accentColor(.yellow)
             
         }

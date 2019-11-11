@@ -10,8 +10,26 @@ import Foundation
 import SwiftUI
 
 
-struct ShoppingItem: Identifiable, Equatable, Hashable {
+class ShoppingItem: Identifiable, Equatable, Hashable {
     var id: String = UUID().uuidString
     let name: String
-    let isComplete: Bool
+    var isComplete: Bool
+    
+    init(name: String, isComplete: Bool) {
+        self.name = name
+        self.isComplete = isComplete
+    }
+    
+    func toggleIsComplete() {
+        isComplete = !isComplete
+    }
+    
+    // MARK: - Equatable / Hashable
+    static func == (lhs: ShoppingItem, rhs: ShoppingItem) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }
