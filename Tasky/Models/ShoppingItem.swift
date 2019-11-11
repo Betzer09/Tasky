@@ -8,12 +8,12 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
-
-class ShoppingItem: Identifiable, Equatable, Hashable {
+class ShoppingItem: Identifiable, ObservableObject {
     var id: String = UUID().uuidString
     let name: String
-    var isComplete: Bool
+    @Published var isComplete: Bool
     
     init(name: String, isComplete: Bool) {
         self.name = name
@@ -24,7 +24,11 @@ class ShoppingItem: Identifiable, Equatable, Hashable {
         isComplete = !isComplete
     }
     
-    // MARK: - Equatable / Hashable
+
+}
+
+// MARK: - Equatable / Hashable
+extension ShoppingItem: Equatable, Hashable {
     static func == (lhs: ShoppingItem, rhs: ShoppingItem) -> Bool {
         return lhs.id == rhs.id
     }
