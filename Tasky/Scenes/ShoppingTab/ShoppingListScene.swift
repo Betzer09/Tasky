@@ -25,9 +25,21 @@ struct ShoppingListScene: View {
                             }
                         }
                     }
-                }.navigationBarTitle("Shopping List")
+                
+                    }
                 .listStyle(GroupedListStyle())
+                .navigationBarTitle("Shopping List")
+                    .navigationBarItems(trailing:
+                    Button(action: {
+                        self.isPresentingView = true
+                    }, label: {
+                        Text("Add").foregroundColor(Color.black)
+                    }).sheet(isPresented: $isPresentingView, content: {
+                        AddItemScene(isPresenting: self.$isPresentingView)
+                    })
+                )
             }
+            
         }
     }
     

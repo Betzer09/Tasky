@@ -14,7 +14,7 @@ struct AddItemScene: View {
     
     var body: some View {
         VStack(spacing: 10) {
-            TextField("Bananas", text: $itemPlaceholder)
+            TextField("Friends Giving List", text: $itemPlaceholder)
             .textFieldStyle(RoundedBorderTextFieldStyle())
             Button(action: {
                 // Create row

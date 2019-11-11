@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		235270AA2378F0F600AEF26B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 235270A92378F0F600AEF26B /* GoogleService-Info.plist */; };
 		237A735A237777DC00B76387 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A7359237777DC00B76387 /* AppDelegate.swift */; };
 		237A735C237777DC00B76387 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A735B237777DC00B76387 /* SceneDelegate.swift */; };
 		237A735E237777DC00B76387 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A735D237777DC00B76387 /* ContentView.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		235270A92378F0F600AEF26B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		237A7356237777DC00B76387 /* Tasky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		237A7359237777DC00B76387 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		237A735B237777DC00B76387 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		235270AB2378F10B00AEF26B /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				237A735D237777DC00B76387 /* ContentView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
 		237A734D237777DC00B76387 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 				237A735B237777DC00B76387 /* SceneDelegate.swift */,
 				237A73752377946300B76387 /* Resrouces */,
 				237A7367237777DF00B76387 /* Info.plist */,
+				235270A92378F0F600AEF26B /* GoogleService-Info.plist */,
 				237A7361237777DF00B76387 /* Preview Content */,
 			);
 			path = Tasky;
@@ -101,7 +112,7 @@
 		237A7371237790EE00B76387 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				237A735D237777DC00B76387 /* ContentView.swift */,
+				235270AB2378F10B00AEF26B /* MainView */,
 				237A736E23778F6400B76387 /* ShoppingTab */,
 			);
 			path = Scenes;
@@ -184,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				237A7366237777DF00B76387 /* LaunchScreen.storyboard in Resources */,
+				235270AA2378F0F600AEF26B /* GoogleService-Info.plist in Resources */,
 				237A7363237777DF00B76387 /* Preview Assets.xcassets in Resources */,
 				237A7360237777DF00B76387 /* Assets.xcassets in Resources */,
 			);
@@ -345,10 +357,12 @@
 				DEVELOPMENT_TEAM = RE524LJXV2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Tasky/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = SPARQDEV.Tasky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -365,10 +379,12 @@
 				DEVELOPMENT_TEAM = RE524LJXV2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Tasky/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = SPARQDEV.Tasky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
